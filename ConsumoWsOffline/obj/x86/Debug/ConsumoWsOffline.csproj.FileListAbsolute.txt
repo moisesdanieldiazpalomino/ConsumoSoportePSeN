@@ -1,0 +1,41 @@
+E:\jorge.castillo\VS2010\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe.config
+E:\jorge.castillo\VS2010\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe
+E:\jorge.castillo\VS2010\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.pdb
+E:\jorge.castillo\VS2010\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Form1.resources
+E:\jorge.castillo\VS2010\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Properties.Resources.resources
+E:\jorge.castillo\VS2010\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.csproj.GenerateResource.Cache
+E:\jorge.castillo\VS2010\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.exe
+E:\jorge.castillo\VS2010\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.pdb
+E:\jorge.castillo\VS2010\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.csprojResolveAssemblyReference.cache
+E:\jorge.castillo\VS2010\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\Ionic.Zip.dll
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe.config
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.exe
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.pdb
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe.config
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.pdb
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Form1.resources
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Properties.Resources.resources
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.csproj.GenerateResource.Cache
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.exe
+E:\jorge.castillo\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.pdb
+E:\Jorge\Fuentes\VS\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe.config
+E:\Jorge\Fuentes\VS\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.exe
+E:\Jorge\Fuentes\VS\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.pdb
+E:\Jorge\Fuentes\VS\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe
+E:\Jorge\Fuentes\VS\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.pdb
+E:\Jorge\Fuentes\VS\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Form1.resources
+E:\Jorge\Fuentes\VS\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Properties.Resources.resources
+E:\Jorge\Fuentes\VS\VS2010\CONSUMO WS PROPIOS NET4\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.csproj.GenerateResource.Cache
+E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe.config
+E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.exe
+E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.pdb
+E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe
+E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.pdb
+E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.csprojResolveAssemblyReference.cache
+E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Form1.resources
+E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Properties.Resources.resources
+E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.csproj.GenerateResource.Cache
+E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe.config
+E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.exe
+E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.pdb

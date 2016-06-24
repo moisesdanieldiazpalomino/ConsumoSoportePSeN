@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://edoc.pe/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://edoc.pe/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://edoc.pe/">
+      <s:element name="ProcesaComprobanteDirectTXT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchivo" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteDirectTXTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcesaComprobanteDirectTXTResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchIntegracion" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteDirectXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchivo" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteDirectXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcesaComprobanteDirectXMLResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchIntegracion" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteDirectSND">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchivo" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteDirectSNDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcesaComprobanteDirectSNDResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchIntegracion" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketTXT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchivo" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketTXTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcesaComprobanteTicketTXTResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorResumen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorFirma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodigosError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketTXTrPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchivo" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="obtenerPDF" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketTXTrPDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcesaComprobanteTicketTXTrPDFResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorResumen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorFirma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodigosError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchPDF" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchivo" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcesaComprobanteTicketXMLResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorResumen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorFirma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodigosError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketXMLrPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchivo" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="obtenerPDF" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketXMLrPDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcesaComprobanteTicketXMLrPDFResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorResumen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorFirma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodigosError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchPDF" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketSND">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchivo" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketSNDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcesaComprobanteTicketSNDResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorResumen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorFirma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodigosError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketSNDrPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchivo" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="obtenerPDF" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesaComprobanteTicketSNDrPDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcesaComprobanteTicketSNDrPDFResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorResumen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorFirma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodigosError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchPDF" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEstadoComprobanteTicket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEstadoComprobanteTicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerEstadoComprobanteTicketResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchIntegracion" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEstadoComprobanteTicketPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pvIdApp" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerPDF" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEstadoComprobanteTicketPDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerEstadoComprobanteTicketPDFResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchIntegracion" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchPDF" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPDFComprobanteTicket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RucEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveAcceso" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pvIdApp" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPDFComprobanteTicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerPDFComprobanteTicketResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContenidoArchPDF" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcesaComprobanteDirectTXTSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteDirectTXT" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteDirectTXTSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteDirectTXTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteDirectXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteDirectXML" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteDirectXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteDirectXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteDirectSNDSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteDirectSND" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteDirectSNDSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteDirectSNDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketTXTSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketTXT" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketTXTSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketTXTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketTXTrPDFSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketTXTrPDF" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketTXTrPDFSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketTXTrPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketXML" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketXMLrPDFSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketXMLrPDF" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketXMLrPDFSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketXMLrPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketSNDSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketSND" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketSNDSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketSNDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketSNDrPDFSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketSNDrPDF" />
+  </wsdl:message>
+  <wsdl:message name="ProcesaComprobanteTicketSNDrPDFSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesaComprobanteTicketSNDrPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEstadoComprobanteTicketSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadoComprobanteTicket" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEstadoComprobanteTicketSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadoComprobanteTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEstadoComprobanteTicketPDFSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadoComprobanteTicketPDF" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEstadoComprobanteTicketPDFSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadoComprobanteTicketPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPDFComprobanteTicketSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPDFComprobanteTicket" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPDFComprobanteTicketSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPDFComprobanteTicketResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CoreBusinessSoap">
+    <wsdl:operation name="ProcesaComprobanteDirectTXT">
+      <wsdl:input message="tns:ProcesaComprobanteDirectTXTSoapIn" />
+      <wsdl:output message="tns:ProcesaComprobanteDirectTXTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteDirectXML">
+      <wsdl:input message="tns:ProcesaComprobanteDirectXMLSoapIn" />
+      <wsdl:output message="tns:ProcesaComprobanteDirectXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteDirectSND">
+      <wsdl:input message="tns:ProcesaComprobanteDirectSNDSoapIn" />
+      <wsdl:output message="tns:ProcesaComprobanteDirectSNDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketTXT">
+      <wsdl:input message="tns:ProcesaComprobanteTicketTXTSoapIn" />
+      <wsdl:output message="tns:ProcesaComprobanteTicketTXTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketTXTrPDF">
+      <wsdl:input message="tns:ProcesaComprobanteTicketTXTrPDFSoapIn" />
+      <wsdl:output message="tns:ProcesaComprobanteTicketTXTrPDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketXML">
+      <wsdl:input message="tns:ProcesaComprobanteTicketXMLSoapIn" />
+      <wsdl:output message="tns:ProcesaComprobanteTicketXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketXMLrPDF">
+      <wsdl:input message="tns:ProcesaComprobanteTicketXMLrPDFSoapIn" />
+      <wsdl:output message="tns:ProcesaComprobanteTicketXMLrPDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketSND">
+      <wsdl:input message="tns:ProcesaComprobanteTicketSNDSoapIn" />
+      <wsdl:output message="tns:ProcesaComprobanteTicketSNDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketSNDrPDF">
+      <wsdl:input message="tns:ProcesaComprobanteTicketSNDrPDFSoapIn" />
+      <wsdl:output message="tns:ProcesaComprobanteTicketSNDrPDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoComprobanteTicket">
+      <wsdl:input message="tns:ObtenerEstadoComprobanteTicketSoapIn" />
+      <wsdl:output message="tns:ObtenerEstadoComprobanteTicketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoComprobanteTicketPDF">
+      <wsdl:input message="tns:ObtenerEstadoComprobanteTicketPDFSoapIn" />
+      <wsdl:output message="tns:ObtenerEstadoComprobanteTicketPDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPDFComprobanteTicket">
+      <wsdl:input message="tns:ObtenerPDFComprobanteTicketSoapIn" />
+      <wsdl:output message="tns:ObtenerPDFComprobanteTicketSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CoreBusinessSoap" type="tns:CoreBusinessSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcesaComprobanteDirectTXT">
+      <soap:operation soapAction="http://edoc.pe/ProcesaComprobanteDirectTXT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteDirectXML">
+      <soap:operation soapAction="http://edoc.pe/ProcesaComprobanteDirectXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteDirectSND">
+      <soap:operation soapAction="http://edoc.pe/ProcesaComprobanteDirectSND" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketTXT">
+      <soap:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketTXT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketTXTrPDF">
+      <soap:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketTXTrPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketXML">
+      <soap:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketXMLrPDF">
+      <soap:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketXMLrPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketSND">
+      <soap:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketSND" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketSNDrPDF">
+      <soap:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketSNDrPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoComprobanteTicket">
+      <soap:operation soapAction="http://edoc.pe/ObtenerEstadoComprobanteTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoComprobanteTicketPDF">
+      <soap:operation soapAction="http://edoc.pe/ObtenerEstadoComprobanteTicketPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPDFComprobanteTicket">
+      <soap:operation soapAction="http://edoc.pe/ObtenerPDFComprobanteTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CoreBusinessSoap12" type="tns:CoreBusinessSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcesaComprobanteDirectTXT">
+      <soap12:operation soapAction="http://edoc.pe/ProcesaComprobanteDirectTXT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteDirectXML">
+      <soap12:operation soapAction="http://edoc.pe/ProcesaComprobanteDirectXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteDirectSND">
+      <soap12:operation soapAction="http://edoc.pe/ProcesaComprobanteDirectSND" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketTXT">
+      <soap12:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketTXT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketTXTrPDF">
+      <soap12:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketTXTrPDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketXML">
+      <soap12:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketXMLrPDF">
+      <soap12:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketXMLrPDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketSND">
+      <soap12:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketSND" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesaComprobanteTicketSNDrPDF">
+      <soap12:operation soapAction="http://edoc.pe/ProcesaComprobanteTicketSNDrPDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoComprobanteTicket">
+      <soap12:operation soapAction="http://edoc.pe/ObtenerEstadoComprobanteTicket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoComprobanteTicketPDF">
+      <soap12:operation soapAction="http://edoc.pe/ObtenerEstadoComprobanteTicketPDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPDFComprobanteTicket">
+      <soap12:operation soapAction="http://edoc.pe/ObtenerPDFComprobanteTicket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CoreBusiness">
+    <wsdl:port name="CoreBusinessSoap" binding="tns:CoreBusinessSoap">
+      <soap:address location="http://190.40.221.212/eBilling.Operations/CoreBusiness.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CoreBusinessSoap12" binding="tns:CoreBusinessSoap12">
+      <soap12:address location="http://190.40.221.212/eBilling.Operations/CoreBusiness.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
