@@ -37,5 +37,11 @@ E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOff
 E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Properties.Resources.resources
 E:\MOISES\FACTURACION_ELECTRONICA\ConsumoWsOffline\ConsumoWsOffline\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.csproj.GenerateResource.Cache
 E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe.config
+E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.exe
+E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\bin\Debug\ConsumoWsOffline.pdb
+E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Form1.resources
+E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Properties.Resources.resources
+E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.csproj.GenerateResource.Cache
 E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.exe
 E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.pdb
+E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Form2.resources

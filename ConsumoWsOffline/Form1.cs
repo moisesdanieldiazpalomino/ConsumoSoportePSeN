@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using ConsumoWsOffline.Servicio;
+using System.Drawing;
 
 using Ionic.Zip;
 using System.ServiceModel;
@@ -12,13 +13,16 @@ namespace ConsumoWsOffline
 {
 	public partial class Form1 : Form
 	{
-		
+
+        string NombreArchivoTXT;
+        string Emisor_Ruc_Clave;
 		public enum TipoDato { TXT, XML };
 		
 		public Form1()
 		{
 			InitializeComponent();
 			btnObtener.Enabled = false;
+            btnLimpiar.Enabled = false;
 		}
 		private string procesarOffLine(TipoDato voTipoDoc, string pvRuc, string pvClave,string pvNombre , byte[] pvContenido)
 		{
@@ -204,6 +208,8 @@ namespace ConsumoWsOffline
 		}
 		private void btnUbicacion_Click(object sender, EventArgs e)
 		{
+         
+
 			openFileDialog1.Filter = "Files (TXT,XML)|*.TXT;*.XML";
 			DialogResult result = openFileDialog1.ShowDialog();
 			
@@ -212,6 +218,11 @@ namespace ConsumoWsOffline
 				try
 				{
 					txtArchivo.Text = openFileDialog1.FileName;
+                    NombreArchivoTXT= openFileDialog1.SafeFileName;
+                    Emisor_Ruc_Clave = NombreArchivoTXT.Substring(0, 11);
+                    txtArchivo.BackColor = Color.LemonChiffon;
+                    
+                    
 				}
 				catch (IOException ex)
 				{
@@ -219,22 +230,24 @@ namespace ConsumoWsOffline
 				}
 			}
 		}
-		private void btnOpcional_Click(object sender, EventArgs e)
-		{
-			openFileDialog2.Filter = "Files (7Z)|*.7z";	
-			DialogResult result = openFileDialog2.ShowDialog();
-			if (result == DialogResult.OK)
-			{
-				try
-				{
-					txtOpcional.Text = openFileDialog2.FileName;
-				}
-				catch (IOException ex)
-				{
-					MessageBox.Show(ex.Message);
-				}
-			}
-		}
+        private void btnOpcional_Click(object sender, EventArgs e)
+        {
+            openFileDialog2.Filter = "Files (7Z)|*.7z";
+            DialogResult result = openFileDialog2.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    txtOpcional.Text = openFileDialog2.FileName;
+                    txtOpcional.BackColor = Color.LemonChiffon;
+                }
+                catch (IOException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
 		private void btnPath_Click(object sender, EventArgs e)
 		{
 			FolderBrowserDialog voFile = new FolderBrowserDialog();
@@ -243,6 +256,7 @@ namespace ConsumoWsOffline
 
 			if (voDialog == DialogResult.OK)
 				txtUbicacion.Text = voFile.SelectedPath;
+            txtUbicacion.BackColor = Color.LemonChiffon;
 		}
 		private void lblTicket_TextChanged(object sender, EventArgs e)
 		{
@@ -261,9 +275,12 @@ namespace ConsumoWsOffline
 				voFileName = voFileName.Substring(0, voFileName.Length - 4);
 
 				if (voExtensionArch == ".txt")
-					txtRespuestaTicket.Text = procesarOffLine(TipoDato.TXT, txtRuc.Text, txtClave.Text, voFileName, File.ReadAllBytes(voRutaYNomArchZip));
+					//txtRespuestaTicket.Text = procesarOffLine(TipoDato.TXT, txtRuc.Text, txtClave.Text, voFileName, File.ReadAllBytes(voRutaYNomArchZip));
+                    txtRespuestaTicket.Text = procesarOffLine(TipoDato.TXT, Emisor_Ruc_Clave.ToString(), Emisor_Ruc_Clave.ToString(), voFileName, File.ReadAllBytes(voRutaYNomArchZip));
+                    
 				else
-					txtRespuestaTicket.Text = procesarOffLine(TipoDato.XML, txtRuc.Text, txtClave.Text, voFileName, File.ReadAllBytes(voRutaYNomArchZip));
+					//txtRespuestaTicket.Text = procesarOffLine(TipoDato.XML, txtRuc.Text, txtClave.Text, voFileName, File.ReadAllBytes(voRutaYNomArchZip));
+                    txtRespuestaTicket.Text = procesarOffLine(TipoDato.XML, Emisor_Ruc_Clave.ToString(), Emisor_Ruc_Clave.ToString(), voFileName, File.ReadAllBytes(voRutaYNomArchZip));
 			}
 
 
@@ -271,7 +288,7 @@ namespace ConsumoWsOffline
 		private void btnObtener_Click(object sender, EventArgs e)
 		{
 			byte[] voRptaIntegracion;//respuesta en bytes del consumo de web service que representa el archivo de integración
-			string voFileZipIntegracion = txtUbicacion.Text + @"\WS_INTEGRACION.zip";//Nombre del archivo de integración ZIP
+			string voFileZipIntegracion = txtUbicacion.Text + @"\WS_INTEGRACION" + "_"+ NombreArchivoTXT + "_.zip";//Nombre del archivo de integración ZIP
 			string voFileUnzipIntegracion = null;//Nombre del archivo de integración DesZipeado
 
 			if (txtUbicacion.Text.Length == 0)
@@ -286,10 +303,11 @@ namespace ConsumoWsOffline
 				try
 				{
 					ConsumoWsOffline.Servicio.CoreBusinessSoapClient off = new ConsumoWsOffline.Servicio.CoreBusinessSoapClient();
-					int voCodRespuesta = off.ObtenerEstadoComprobanteTicket(txtRuc.Text, txtClave.Text, lblTicket.Text, out voRptaIntegracion);
+                    int voCodRespuesta = off.ObtenerEstadoComprobanteTicket(Emisor_Ruc_Clave.ToString(), Emisor_Ruc_Clave.ToString(), lblTicket.Text, out voRptaIntegracion);
+                   // int voCodRespuesta = off.ObtenerEstadoComprobanteTicket(txtRuc.Text, txtClave.Text, lblTicket.Text, out voRptaIntegracion);
+
 					//int voCodRespuesta = off.ObtenerEstadoComprobanteTicket_TEST(txtRuc.Text, txtClave.Text, lblTicket.Text, out voRptaIntegracion);
-					
-										
+									
 					lblCodRpta.Text = voCodRespuesta + moObtieneDescriptionError(voCodRespuesta);
 
 					if (voRptaIntegracion != null)
@@ -309,6 +327,7 @@ namespace ConsumoWsOffline
 								entry.Extract(txtUbicacion.Text);
 
 								MessageBox.Show("Archivo creado: " + voFileUnzipIntegracion);
+                                btnLimpiar.Enabled = true;
 							});
 						}
 
@@ -324,6 +343,32 @@ namespace ConsumoWsOffline
 
 			}
 		}
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ToolComentarios.SetToolTip(this.btnUbicacion, "Abrir Archivo");
+            ToolComentarios.SetToolTip(this.btnPath, "Seleccionar Ubicación");
+            ToolComentarios.SetToolTip(this.btnGenerar, "Enviar Archivo");
+            ToolComentarios.SetToolTip(this.btnObtener, "Obtener Respuesta");
+            ToolComentarios.SetToolTip(this.btnLimpiar, "Limpar Formulario");
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtArchivo.Clear();
+            txtOpcional.Clear();
+            txtUbicacion.Clear();
+            lblTicket.Clear();
+            txtRespuestaTicket.Clear();
+            lblRespuestaIntegracion.Clear();
+            btnUbicacion.Focus();
+            
+          
+            
+        }
+
+      
 
 	}
 }
