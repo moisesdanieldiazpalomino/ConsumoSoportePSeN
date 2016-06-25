@@ -44,4 +44,3 @@ E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\Co
 E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.csproj.GenerateResource.Cache
 E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.exe
 E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.pdb
-E:\MOISES\RepositorioGitHuB\ConsumoSoportePSeN\ConsumoWsOffline\obj\x86\Debug\ConsumoWsOffline.Form2.resources

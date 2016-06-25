@@ -59,6 +59,8 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTipoComprobante = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -74,10 +76,10 @@
             // 
             this.txtOpcional.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtOpcional.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOpcional.Location = new System.Drawing.Point(11, 87);
+            this.txtOpcional.Location = new System.Drawing.Point(11, 106);
             this.txtOpcional.Name = "txtOpcional";
             this.txtOpcional.ReadOnly = true;
-            this.txtOpcional.Size = new System.Drawing.Size(784, 23);
+            this.txtOpcional.Size = new System.Drawing.Size(813, 23);
             this.txtOpcional.TabIndex = 15;
             // 
             // txtArchivo
@@ -87,13 +89,13 @@
             this.txtArchivo.Location = new System.Drawing.Point(11, 38);
             this.txtArchivo.Name = "txtArchivo";
             this.txtArchivo.ReadOnly = true;
-            this.txtArchivo.Size = new System.Drawing.Size(784, 23);
+            this.txtArchivo.Size = new System.Drawing.Size(813, 23);
             this.txtArchivo.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 71);
+            this.label4.Location = new System.Drawing.Point(8, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 13;
@@ -120,6 +122,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.lblTipoComprobante);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtUbicacion);
             this.groupBox2.Controls.Add(this.btnPath);
@@ -132,7 +136,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 48);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(874, 175);
+            this.groupBox2.Size = new System.Drawing.Size(874, 195);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Archivos";
@@ -140,7 +144,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 121);
+            this.label7.Location = new System.Drawing.Point(8, 140);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(257, 13);
             this.label7.TabIndex = 20;
@@ -150,19 +154,19 @@
             // 
             this.txtUbicacion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUbicacion.Location = new System.Drawing.Point(11, 137);
+            this.txtUbicacion.Location = new System.Drawing.Point(11, 156);
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.ReadOnly = true;
-            this.txtUbicacion.Size = new System.Drawing.Size(784, 23);
+            this.txtUbicacion.Size = new System.Drawing.Size(813, 23);
             this.txtUbicacion.TabIndex = 22;
             // 
             // btnPath
             // 
             this.btnPath.BackgroundImage = global::ConsumoWsOffline.Properties.Resources.Ubicacion;
             this.btnPath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPath.Location = new System.Drawing.Point(801, 122);
+            this.btnPath.Location = new System.Drawing.Point(830, 152);
             this.btnPath.Name = "btnPath";
-            this.btnPath.Size = new System.Drawing.Size(62, 47);
+            this.btnPath.Size = new System.Drawing.Size(33, 27);
             this.btnPath.TabIndex = 19;
             this.btnPath.UseVisualStyleBackColor = true;
             this.btnPath.Click += new System.EventHandler(this.btnPath_Click);
@@ -171,9 +175,9 @@
             // 
             this.btnOpcional.BackgroundImage = global::ConsumoWsOffline.Properties.Resources.Abrir;
             this.btnOpcional.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOpcional.Location = new System.Drawing.Point(801, 68);
+            this.btnOpcional.Location = new System.Drawing.Point(830, 102);
             this.btnOpcional.Name = "btnOpcional";
-            this.btnOpcional.Size = new System.Drawing.Size(62, 48);
+            this.btnOpcional.Size = new System.Drawing.Size(33, 27);
             this.btnOpcional.TabIndex = 18;
             this.btnOpcional.UseVisualStyleBackColor = true;
             this.btnOpcional.Click += new System.EventHandler(this.btnOpcional_Click);
@@ -183,9 +187,9 @@
             this.btnUbicacion.BackColor = System.Drawing.Color.White;
             this.btnUbicacion.BackgroundImage = global::ConsumoWsOffline.Properties.Resources.Abrir;
             this.btnUbicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUbicacion.Location = new System.Drawing.Point(801, 19);
+            this.btnUbicacion.Location = new System.Drawing.Point(830, 34);
             this.btnUbicacion.Name = "btnUbicacion";
-            this.btnUbicacion.Size = new System.Drawing.Size(62, 48);
+            this.btnUbicacion.Size = new System.Drawing.Size(33, 27);
             this.btnUbicacion.TabIndex = 5;
             this.btnUbicacion.UseVisualStyleBackColor = false;
             this.btnUbicacion.Click += new System.EventHandler(this.btnUbicacion_Click);
@@ -197,7 +201,7 @@
             this.groupBox3.Controls.Add(this.txtRespuestaTicket);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.btnGenerar);
-            this.groupBox3.Location = new System.Drawing.Point(12, 229);
+            this.groupBox3.Location = new System.Drawing.Point(12, 261);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(874, 135);
             this.groupBox3.TabIndex = 19;
@@ -218,10 +222,10 @@
             // txtRespuestaTicket
             // 
             this.txtRespuestaTicket.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtRespuestaTicket.Location = new System.Drawing.Point(74, 48);
+            this.txtRespuestaTicket.Location = new System.Drawing.Point(52, 48);
             this.txtRespuestaTicket.Name = "txtRespuestaTicket";
             this.txtRespuestaTicket.ReadOnly = true;
-            this.txtRespuestaTicket.Size = new System.Drawing.Size(789, 73);
+            this.txtRespuestaTicket.Size = new System.Drawing.Size(811, 73);
             this.txtRespuestaTicket.TabIndex = 18;
             this.txtRespuestaTicket.Text = "";
             this.txtRespuestaTicket.WordWrap = false;
@@ -230,9 +234,9 @@
             // 
             this.btnGenerar.BackgroundImage = global::ConsumoWsOffline.Properties.Resources.Enviar2;
             this.btnGenerar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGenerar.Location = new System.Drawing.Point(6, 47);
+            this.btnGenerar.Location = new System.Drawing.Point(13, 48);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(62, 54);
+            this.btnGenerar.Size = new System.Drawing.Size(33, 33);
             this.btnGenerar.TabIndex = 0;
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
@@ -248,7 +252,7 @@
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.lblRespuestaIntegracion);
             this.groupBox4.Controls.Add(this.btnObtener);
-            this.groupBox4.Location = new System.Drawing.Point(12, 370);
+            this.groupBox4.Location = new System.Drawing.Point(12, 402);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(874, 125);
             this.groupBox4.TabIndex = 20;
@@ -275,10 +279,10 @@
             // lblRespuestaIntegracion
             // 
             this.lblRespuestaIntegracion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblRespuestaIntegracion.Location = new System.Drawing.Point(74, 45);
+            this.lblRespuestaIntegracion.Location = new System.Drawing.Point(52, 45);
             this.lblRespuestaIntegracion.Name = "lblRespuestaIntegracion";
             this.lblRespuestaIntegracion.ReadOnly = true;
-            this.lblRespuestaIntegracion.Size = new System.Drawing.Size(789, 70);
+            this.lblRespuestaIntegracion.Size = new System.Drawing.Size(811, 70);
             this.lblRespuestaIntegracion.TabIndex = 19;
             this.lblRespuestaIntegracion.Text = "";
             this.lblRespuestaIntegracion.WordWrap = false;
@@ -287,9 +291,9 @@
             // 
             this.btnObtener.BackgroundImage = global::ConsumoWsOffline.Properties.Resources.Descargar;
             this.btnObtener.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnObtener.Location = new System.Drawing.Point(8, 46);
+            this.btnObtener.Location = new System.Drawing.Point(13, 45);
             this.btnObtener.Name = "btnObtener";
-            this.btnObtener.Size = new System.Drawing.Size(62, 54);
+            this.btnObtener.Size = new System.Drawing.Size(33, 33);
             this.btnObtener.TabIndex = 9;
             this.btnObtener.UseVisualStyleBackColor = true;
             this.btnObtener.Click += new System.EventHandler(this.btnObtener_Click);
@@ -308,9 +312,9 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.BackgroundImage = global::ConsumoWsOffline.Properties.Resources.Salir;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(822, 501);
+            this.button1.Location = new System.Drawing.Point(844, 533);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 53);
+            this.button1.Size = new System.Drawing.Size(31, 33);
             this.button1.TabIndex = 25;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -319,9 +323,9 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.White;
             this.btnLimpiar.BackgroundImage = global::ConsumoWsOffline.Properties.Resources.Limpiar;
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLimpiar.Location = new System.Drawing.Point(12, 501);
+            this.btnLimpiar.Location = new System.Drawing.Point(23, 533);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(64, 53);
+            this.btnLimpiar.Size = new System.Drawing.Size(35, 33);
             this.btnLimpiar.TabIndex = 23;
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -348,12 +352,33 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Tipo de comprobante:";
+            // 
+            // lblTipoComprobante
+            // 
+            this.lblTipoComprobante.AutoSize = true;
+            this.lblTipoComprobante.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoComprobante.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblTipoComprobante.Location = new System.Drawing.Point(127, 68);
+            this.lblTipoComprobante.Name = "lblTipoComprobante";
+            this.lblTipoComprobante.Size = new System.Drawing.Size(104, 13);
+            this.lblTipoComprobante.TabIndex = 24;
+            this.lblTipoComprobante.Text = "No Seleccionado";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(895, 560);
+            this.ClientSize = new System.Drawing.Size(895, 572);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLimpiar);
@@ -411,6 +436,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip ToolComentarios;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTipoComprobante;
 	}
 }
 

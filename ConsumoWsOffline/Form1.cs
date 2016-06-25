@@ -24,6 +24,71 @@ namespace ConsumoWsOffline
 			btnObtener.Enabled = false;
             btnLimpiar.Enabled = false;
 		}
+        private string ValidarNombreArchivo( string NombreArchivo)
+        {
+            string NomArchivo= NombreArchivo.Substring(0, NombreArchivo.Length - 4);
+            string Comprobante=null;
+            string[,] ListaExpresionRegulares=new string[11,2]
+                
+                {{@"^[0-9]{11}[-]{1}[0]{1}[1]{1}[-]{1}[F]{1}[A-Z0-9]{3}[-]{1}[0-9]{1,8}$","FACTURA"},
+                 {@"^[0-9]{11}[-]{1}[0]{1}[3]{1}[-]{1}[B]{1}[A-Z0-9]{3}[-]{1}[0-9]{1,8}$","BOLETA DE VENTA"},
+                 {@"^[0-9]{11}[-]{1}[0]{1}[7]{1}[-]{1}[FB]{1}[A-Z0-9]{3}[-]{1}[0-9]{1,8}$","NOTA DE CREDITO"},
+                 {@"^[0-9]{11}[-]{1}[0]{1}[8]{1}[-]{1}[FB]{1}[A-Z0-9]{3}[-]{1}[0-9]{1,8}$","NOTA DE DEBITO"},
+                 {@"^[0-9]{11}[-]{1}[R]{1}[C]{1}[-]{1}" + DateTime.Now.ToString("yyyyMMdd") + "[-]{1}[0-9]{1,5}$","RESUMEN DIARIO"},
+                 {@"^[0-9]{11}[-]{1}[R]{1}[A]{1}[-]{1}" + DateTime.Now.ToString("yyyyMMdd") + "[-]{1}[0-9]{1,5}$","COMUNICACION DE BAJA"},
+                 {@"^[0-9]{11}[-]{1}[0]{1}[9]{1}[-]{1}[T]{1}[A-Z0-9]{3}[-]{1}[0-9]{1,8}$","GUIA DE REMISION REMITENTE"},
+                 {@"^[0-9]{11}[-]{1}[2]{1}[0]{1}[-]{1}[R]{1}[A-Z0-9]{3}[-]{1}[0-9]{1,8}$","RETENCION"},
+                 {@"^[0-9]{11}[-]{1}[4]{1}[0]{1}[-]{1}[P]{1}[A-Z0-9]{3}[-]{1}[0-9]{1,8}$","PERCEPCION"},
+                 {@"^[0-9]{11}[-]{1}[R]{1}[R]{1}[-]{1}" + DateTime.Now.ToString("yyyyMMdd") + "[-]{1}[0-9]{1,5}$","REVERSION RETENCION"},
+                 {@"^[0-9]{11}[-]{1}[R]{1}[P]{1}[-]{1}" + DateTime.Now.ToString("yyyyMMdd") + "[-]{1}[0-9]{1,5}$","REVERSION PERCEPCION" }      
+                };
+
+            for (int i = 0; i < ListaExpresionRegulares.Length; i++)
+            {
+                if (i < 11)
+                {
+                    System.Text.RegularExpressions.Regex RegEx = new System.Text.RegularExpressions.Regex(ListaExpresionRegulares[i, 0].ToString());
+                    System.Text.RegularExpressions.Match Resultado = RegEx.Match(NomArchivo);
+                    if (Resultado.Success)
+                    {
+                        Comprobante = ListaExpresionRegulares[i, 1].ToString(); break;
+
+                        //MessageBox.Show("Bien"); break;
+                        
+
+                    }
+                }
+                else
+                {
+                    Comprobante = "Nombre del archivo no tiene el formato esperado";
+                }
+            }
+
+            return Comprobante;
+            //string Tipo_Comprobante = NombreArchivo.Substring(11, 4);
+            //
+            //switch( Tipo_Comprobante )
+
+            //{
+            //    case "-01-": Comprobante = "FACTURA"; break;
+            //    case "-03-": Comprobante = "BOLETA DE VENTA"; break;
+            //    case "-07-": Comprobante = "NOTA DE CREDITO"; break;
+            //    case "-08-": Comprobante = "NOTA DE DEBITO"; break;
+            //    case "-09-": Comprobante = "GUIA REMISION REMITENTE"; break;
+            //    case "-20-": Comprobante = "RETENCION"; break;
+            //    case "-40-": Comprobante = "PERCEPCION"; break;
+            //    case "-RA-": Comprobante = "COMUNICACION DE BAJA"; break;
+            //    case "-RC-": Comprobante = "RESUMEN DIARIO"; break;
+            //    case "-RR-": Comprobante = "REVERSION RETENCION"; break;
+            //    case "-RP-": Comprobante = "REVERSION PERCEPCION"; break;
+            //    default: Comprobante = "El archivo no tiene el formato esperado"; break;
+            //}
+            
+        }
+
+
+
+
 		private string procesarOffLine(TipoDato voTipoDoc, string pvRuc, string pvClave,string pvNombre , byte[] pvContenido)
 		{
 			string voMsjRespuesta = null, voNumTicket ,voValorResumen, voValorFirma, voCodError;
@@ -221,6 +286,10 @@ namespace ConsumoWsOffline
                     NombreArchivoTXT= openFileDialog1.SafeFileName;
                     Emisor_Ruc_Clave = NombreArchivoTXT.Substring(0, 11);
                     txtArchivo.BackColor = Color.LemonChiffon;
+                    lblTipoComprobante.Text = ValidarNombreArchivo(NombreArchivoTXT);
+                   //MessageBox.Show( ValidarNombreArchivo(NombreArchivoTXT));
+                    
+                // MessageBox.Show(NombreArchivoTXT.Substring(0,NombreArchivoTXT.Length -4));
                     
                     
 				}
@@ -347,6 +416,7 @@ namespace ConsumoWsOffline
         private void Form1_Load(object sender, EventArgs e)
         {
             ToolComentarios.SetToolTip(this.btnUbicacion, "Abrir Archivo");
+            ToolComentarios.SetToolTip(this.btnOpcional, "Abrir Archivo");
             ToolComentarios.SetToolTip(this.btnPath, "Seleccionar Ubicación");
             ToolComentarios.SetToolTip(this.btnGenerar, "Enviar Archivo");
             ToolComentarios.SetToolTip(this.btnObtener, "Obtener Respuesta");
